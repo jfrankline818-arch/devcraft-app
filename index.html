@@ -36,12 +36,8 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .adsense-placeholder {
-            background-image: radial-gradient(rgba(156, 163, 175, 0.2) 1px, transparent 0);
-            background-size: 12px 12px;
-        }
-        .dark .adsense-placeholder {
-            background-image: radial-gradient(rgba(75, 85, 99, 0.3) 1px, transparent 0);
+        .adsense-container {
+            background-color: rgba(156, 163, 175, 0.05);
         }
     </style>
 </head>
@@ -103,12 +99,19 @@
         </div>
     </header>
 
-    <!-- AD UNIT #1: TOP LEADERBOARD BANNER (150px Safe Buffer) -->
+    <!-- AD UNIT #1: TOP LEADERBOARD BANNER -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 mb-8">
-        <div class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-3 text-center adsense-placeholder">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 block mb-1">Advertisement</span>
-            <div class="min-h-[90px] flex items-center justify-center text-xs text-gray-400 italic">
-                <p><i class="fa-solid fa-rectangle-ad text-gray-300 dark:text-gray-600 text-3xl mb-1 block"></i> Responsive Header Leaderboard Unit</p>
+        <div class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-3 text-center adsense-container shadow-sm">
+            <div class="min-h-[90px] flex items-center justify-center text-xs text-gray-400">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4321543724878495"
+                     data-ad-slot="1122334456"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </div>
     </div>
@@ -207,11 +210,18 @@
                     </div>
                 </section>
 
-                <!-- AD UNIT #2: MID-PAGE NATIVE DISPLAY BANNER (Safe Spacing Buffer) -->
-                <div class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center adsense-placeholder my-8">
-                    <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 block mb-1">Advertisement</span>
-                    <div class="min-h-[120px] flex items-center justify-center text-xs text-gray-400 italic">
-                        <p><i class="fa-solid fa-ad text-gray-300 dark:text-gray-600 text-3xl mb-1 block"></i> Mid-Page Native / In-Feed Ad Block</p>
+                <!-- AD UNIT #2: MID-PAGE BANNER -->
+                <div class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center adsense-container my-8 shadow-sm">
+                    <div class="min-h-[120px] flex items-center justify-center text-xs text-gray-400">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-4321543724878495"
+                             data-ad-slot="2233445567"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     </div>
                 </div>
 
@@ -250,14 +260,17 @@
             <!-- SIDEBAR AREA (Ad Unit #3 + Privacy Card) -->
             <aside class="lg:col-span-4 space-y-6">
                 <div class="sticky top-20 space-y-6">
-                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center shadow-sm adsense-placeholder">
-                        <span class="text-[10px] font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 block mb-2">Advertisement</span>
-                        <div class="min-h-[250px] flex items-center justify-center text-xs text-gray-400 italic border border-dashed border-gray-300 dark:border-gray-700 rounded-xl p-4">
-                            <div>
-                                <i class="fa-solid fa-rectangle-ad text-gray-300 dark:text-gray-600 text-4xl mb-2 block"></i>
-                                <p>Sidebar Ad Display Unit</p>
-                                <p class="text-[10px] text-gray-400 mt-1">300x250 or Responsive Rectangle</p>
-                            </div>
+                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center shadow-sm adsense-container">
+                        <div class="min-h-[250px] flex items-center justify-center text-xs text-gray-400 border border-dashed border-gray-200 dark:border-gray-700 rounded-xl p-4">
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-4321543724878495"
+                                 data-ad-slot="3344556678"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                 (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                         </div>
                     </div>
 
@@ -290,6 +303,8 @@
                     <button onclick="openPolicyModal('terms')" class="hover:underline">Terms of Service</button>
                     <span>•</span>
                     <button onclick="openPolicyModal('about')" class="hover:underline">About Us</button>
+                    <span>•</span>
+                    <button onclick="openPolicyModal('contact')" class="hover:underline">Contact Support</button>
                 </div>
             </div>
         </div>
@@ -297,8 +312,8 @@
 
     <!-- POLICY MODAL POPUP -->
     <div id="policy-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full p-6 max-h-[80vh] overflow-y-auto border border-gray-200 dark:border-gray-700">
-            <div class="flex justify-between items-center mb-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full p-6 max-h-[80vh] overflow-y-auto border border-gray-200 dark:border-gray-700 shadow-xl">
+            <div class="flex justify-between items-center mb-4 border-b pb-3 border-gray-200 dark:border-gray-700">
                 <h3 id="modal-title" class="text-xl font-bold text-gray-900 dark:text-white">Policy</h3>
                 <button onclick="closePolicyModal()" class="text-gray-400 hover:text-gray-600 text-lg"><i class="fa-solid fa-xmark"></i></button>
             </div>
@@ -315,6 +330,8 @@
 
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            icon.className = document.documentElement.classList.contains('dark') ? 'fa-solid fa-sun text-lg' : 'fa-solid fa-moon text-lg';
         }
 
         function toggleMobileMenu() {
@@ -413,18 +430,35 @@
             const modal = document.getElementById('policy-modal');
             const title = document.getElementById('modal-title');
             const content = document.getElementById('modal-content');
+            modal.classList.remove('hidden');
 
             if (type === 'privacy') {
                 title.innerText = 'Privacy Policy';
-                content.innerHTML = '<p>DevCraft Studio prioritizes developer privacy. All data formatting, Base64 conversions, and regex testing occur strictly locally inside your web browser. No payload contents or string inputs are logged or sent to remote servers.</p><p>We use Google AdSense to serve ads on our site. Third-party vendors use cookies to serve ads based on your prior visits to our website.</p>';
+                content.innerHTML = `
+                    <p><strong>Effective Date:</strong> October 2026</p>
+                    <p>DevCraft Studio prioritizes developer privacy. All data formatting, Base64 conversions, and regex testing occur strictly locally inside your web browser. No payload contents or string inputs are logged or sent to remote servers.</p>
+                    <p><strong>Third-Party Advertisers:</strong> We use Google AdSense to serve ads. Google, as a third-party vendor, uses cookies to serve ads based on your prior visits to our website or other websites.</p>
+                    <p>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" class="text-brand-600 underline">Google Ads Settings</a>.</p>
+                `;
             } else if (type === 'terms') {
                 title.innerText = 'Terms of Service';
-                content.innerHTML = '<p>By accessing DevCraft Studio, you agree to use our developer tools for lawful debugging and string processing. Software is provided "as is" without warranty.</p>';
+                content.innerHTML = `
+                    <p><strong>Effective Date:</strong> October 2026</p>
+                    <p>By accessing DevCraft Studio, you agree to use our developer tools for lawful debugging and string processing. Software is provided "as is" without warranty.</p>
+                `;
             } else if (type === 'about') {
                 title.innerText = 'About Us';
-                content.innerHTML = '<p>DevCraft Studio is a client-side developer utility suite designed for web developers, API engineers, and webmasters seeking fast, offline-capable debugging tools.</p>';
+                content.innerHTML = `
+                    <p>DevCraft Studio is a client-side developer utility suite designed for web developers, API engineers, and webmasters seeking fast, offline-capable debugging tools.</p>
+                `;
+            } else if (type === 'contact') {
+                title.innerText = 'Contact Support';
+                content.innerHTML = `
+                    <p>Need assistance or have feedback regarding DevCraft Studio? We are here to help!</p>
+                    <p>You can reach our support team directly via email at: <strong>support@devcraftstudio.com</strong></p>
+                    <p>We typically respond to all inquiries within 24–48 business hours.</p>
+                `;
             }
-            modal.classList.remove('hidden');
         }
 
         function closePolicyModal() {
