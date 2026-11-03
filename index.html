@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevCraft Studio - Web Developer Utilities & API Knowledge Hub</title>
 
-    <!-- Google AdSense Master Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4321543724878495" crossorigin="anonymous"></script>
-    
-    <!-- Google AdSense Account Verification Meta Tag -->
-    <meta name="google-adsense-account" content="ca-pub-4321543724878495">
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -35,11 +29,6 @@
     </script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .adsense-container {
-            background-color: rgba(156, 163, 175, 0.05);
-        }
-    </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
 
@@ -48,7 +37,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('json-tool')">
+                <a href="#json-tool" class="flex items-center space-x-3">
                     <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-xl shadow-md">
                         <i class="fa-solid fa-code"></i>
                     </div>
@@ -56,25 +45,34 @@
                         <span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">DevCraft</span>
                         <span class="text-xs bg-brand-100 dark:bg-brand-900 text-brand-800 dark:text-brand-200 px-2 py-0.5 rounded-full font-medium ml-1">Studio</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Desktop Nav -->
                 <nav class="hidden md:flex space-x-1">
-                    <button onclick="switchTab('json-tool')" id="nav-json-tool" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-gray-700 transition">
-                        <i class="fa-solid fa-brackets-curly mr-1.5"></i> JSON Formatter
-                    </button>
-                    <button onclick="switchTab('b64-tool')" id="nav-b64-tool" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    <a href="#json-tool" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-brackets-curly mr-1.5"></i> JSON
+                    </a>
+                    <a href="#b64-tool" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                         <i class="fa-solid fa-right-left mr-1.5"></i> Base64
-                    </button>
-                    <button onclick="switchTab('regex-tool')" id="nav-regex-tool" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-                        <i class="fa-solid fa-asterisk mr-1.5"></i> Regex Tester
-                    </button>
-                    <button onclick="switchTab('url-tool')" id="nav-url-tool" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    </a>
+                    <a href="#regex-tool" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-asterisk mr-1.5"></i> Regex
+                    </a>
+                    <a href="#url-tool" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                         <i class="fa-solid fa-link mr-1.5"></i> URL Encoder
-                    </button>
-                    <button onclick="switchTab('articles')" id="nav-articles" class="nav-btn px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    </a>
+                    <a href="#articles" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                         <i class="fa-solid fa-book-open mr-1.5"></i> Guides
-                    </button>
+                    </a>
+                    <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-circle-info mr-1.5"></i> About
+                    </a>
+                    <a href="#privacy" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-user-shield mr-1.5"></i> Privacy
+                    </a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-envelope mr-1.5"></i> Contact
+                    </a>
                 </nav>
 
                 <!-- Actions -->
@@ -91,40 +89,27 @@
 
         <!-- Mobile Nav Menu -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 pt-2 pb-3 space-y-1">
-            <button onclick="switchTab('json-tool')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">JSON Formatter</button>
-            <button onclick="switchTab('b64-tool')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Base64 Encoder/Decoder</button>
-            <button onclick="switchTab('regex-tool')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Regex Pattern Tester</button>
-            <button onclick="switchTab('url-tool')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">URL Encoder / Decoder</button>
-            <button onclick="switchTab('articles')" class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Developer Guides</button>
+            <a href="#json-tool" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">JSON Formatter</a>
+            <a href="#b64-tool" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Base64 Encoder/Decoder</a>
+            <a href="#regex-tool" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Regex Pattern Tester</a>
+            <a href="#url-tool" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">URL Encoder / Decoder</a>
+            <a href="#articles" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Developer Guides</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About Us</a>
+            <a href="#privacy" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Privacy Policy</a>
+            <a href="#terms" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Terms of Service</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact Support</a>
         </div>
     </header>
 
-    <!-- AD UNIT #1: TOP LEADERBOARD BANNER (ENLARGED & RESPONSIVE) -->
-    <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-6">
-        <div class="w-full adsense-container border border-gray-800 rounded-2xl p-4 sm:p-6 text-center shadow-sm min-h-[120px] flex items-center justify-center">
-            <div class="w-full flex justify-center items-center min-h-[90px]">
-                <ins class="adsbygoogle"
-                     style="display:block; width:100%; max-width:728px; height:90px;"
-                     data-ad-client="ca-pub-4321543724878495"
-                     data-ad-slot="1234567890"
-                     data-ad-format="horizontal"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </div>
-    </div>
-
     <!-- MAIN APP CONTAINER -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-6 flex-grow w-full">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8 flex-grow w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
             <!-- MAIN CONTENT AREA (8 Cols) -->
-            <div class="lg:col-span-8 space-y-6">
+            <div class="lg:col-span-8 space-y-10">
 
                 <!-- TOOL 1: JSON FORMATTER & VALIDATOR -->
-                <section id="tool-json-tool" class="tab-content bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <section id="json-tool" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <h1 class="text-2xl font-bold text-gray-900 dark:text-white">JSON Formatter & Validator</h1>
@@ -137,16 +122,21 @@
 
                     <div id="json-status" class="hidden mb-4 p-3 rounded-xl text-xs font-semibold"></div>
 
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 mb-6">
                         <button onclick="formatJSON(2)" class="px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl transition shadow-sm"><i class="fa-solid fa-indent mr-1"></i> Beautify (2 Spaces)</button>
                         <button onclick="formatJSON(4)" class="px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl transition shadow-sm"><i class="fa-solid fa-indent mr-1"></i> Beautify (4 Spaces)</button>
                         <button onclick="minifyJSON()" class="px-4 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-xs font-semibold rounded-xl transition"><i class="fa-solid fa-compress mr-1"></i> Minify</button>
                         <button onclick="copyToClipboard('json-input')" class="px-4 py-2.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 text-xs font-semibold rounded-xl transition ml-auto"><i class="fa-regular fa-copy mr-1"></i> Copy</button>
                     </div>
+
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-4 text-xs text-gray-600 dark:text-gray-400 space-y-2 leading-relaxed">
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200">JSON Validation & Formatting Technical Specifications</h4>
+                        <p>JSON (JavaScript Object Notation) is a lightweight standard specified in ECMA-404. Our client-side validator verifies syntax compliance without sending data to external networks, protecting confidential application payloads.</p>
+                    </div>
                 </section>
 
                 <!-- TOOL 2: BASE64 ENCODER & DECODER -->
-                <section id="tool-b64-tool" class="tab-content hidden bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <section id="b64-tool" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Base64 Encoder & Decoder</h2>
@@ -157,15 +147,20 @@
 
                     <textarea id="b64-input" rows="6" placeholder="Type text to encode or paste Base64 string to decode..." class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 font-mono text-sm text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:outline-none transition mb-4"></textarea>
 
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 mb-6">
                         <button onclick="processBase64('encode')" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl transition shadow-sm"><i class="fa-solid fa-lock mr-1"></i> Encode Base64</button>
                         <button onclick="processBase64('decode')" class="px-5 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-xs font-semibold rounded-xl transition"><i class="fa-solid fa-unlock mr-1"></i> Decode Base64</button>
                         <button onclick="copyToClipboard('b64-input')" class="px-4 py-2.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 text-xs font-semibold rounded-xl transition ml-auto"><i class="fa-regular fa-copy mr-1"></i> Copy</button>
                     </div>
+
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-4 text-xs text-gray-600 dark:text-gray-400 space-y-2 leading-relaxed">
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200">Base64 Data Representation</h4>
+                        <p>Base64 is a binary-to-text encoding scheme that converts binary data into 64 ASCII characters. It is commonly used in HTTP header authentication, data URIs, and email attachments.</p>
+                    </div>
                 </section>
 
                 <!-- TOOL 3: REGEX TESTER -->
-                <section id="tool-regex-tool" class="tab-content hidden bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <section id="regex-tool" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Regular Expression Pattern Tester</h2>
@@ -192,7 +187,7 @@
                 </section>
 
                 <!-- TOOL 4: URL ENCODER & DECODER -->
-                <section id="tool-url-tool" class="tab-content hidden bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                <section id="url-tool" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">URL Component Encoder & Decoder</h2>
@@ -203,33 +198,23 @@
 
                     <textarea id="url-input" rows="6" placeholder="Type URL or query parameter string here..." class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 font-mono text-sm text-gray-800 dark:text-gray-100 focus:ring-2 focus:ring-brand-500 focus:outline-none transition mb-4"></textarea>
 
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-2 mb-6">
                         <button onclick="processURL('encode')" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl transition shadow-sm"><i class="fa-solid fa-code mr-1"></i> URL Encode</button>
                         <button onclick="processURL('decode')" class="px-5 py-2.5 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-xs font-semibold rounded-xl transition"><i class="fa-solid fa-file-code mr-1"></i> URL Decode</button>
                         <button onclick="copyToClipboard('url-input')" class="px-4 py-2.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 text-xs font-semibold rounded-xl transition ml-auto"><i class="fa-regular fa-copy mr-1"></i> Copy</button>
                     </div>
+
+                    <div class="border-t border-gray-200 dark:border-gray-700 pt-4 text-xs text-gray-600 dark:text-gray-400 space-y-2 leading-relaxed">
+                        <h4 class="font-bold text-gray-800 dark:text-gray-200">Percent-Encoding Standard</h4>
+                        <p>URL encoding replaces unsafe ASCII characters with a `%` followed by two hexadecimal digits, allowing parameters to be passed safely in GET requests without breaking URL syntax.</p>
+                    </div>
                 </section>
 
-                <!-- AD UNIT #2: MID-PAGE BANNER -->
-                <div class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center adsense-container my-8 shadow-sm">
-                    <div class="min-h-[120px] flex items-center justify-center text-xs text-gray-400">
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-client="ca-pub-4321543724878495"
-                             data-ad-slot="2233445567"
-                             data-ad-format="auto"
-                             data-full-width-responsive="true"></ins>
-                        <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                    </div>
-                </div>
-
                 <!-- ARTICLES & GUIDES -->
-                <section id="tool-articles" class="tab-content hidden space-y-6">
+                <section id="articles" class="space-y-6">
                     <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Developer & API Knowledge Base</h2>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Technical insights on REST API design, data serialization, and client-side encryption.</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Technical insights on REST API design, data serialization, and client-side processing.</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -238,7 +223,7 @@
                                 <span class="text-xs font-bold uppercase text-brand-600 dark:text-brand-400 tracking-wider">Web Architecture</span>
                                 <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">JSON vs XML: Data Serialization</h3>
                                 <p class="text-sm text-gray-600 dark:text-gray-300 mt-3">
-                                    JSON (JavaScript Object Notation) has surpassed XML as the primary payload format for RESTful APIs due to its lightweight syntax, fast native parsing in JavaScript engines, and human-readable structure.
+                                    JSON has surpassed XML as the primary payload format for REST APIs due to its lightweight structure, fast native parsing in JavaScript engines, and cleaner syntax.
                                 </p>
                             </div>
                         </article>
@@ -246,34 +231,81 @@
                         <article class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 flex flex-col justify-between">
                             <div>
                                 <span class="text-xs font-bold uppercase text-brand-600 dark:text-brand-400 tracking-wider">Security Best Practices</span>
-                                <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Understanding Base64 Encoding Limitations</h3>
+                                <h3 class="text-xl font-bold mt-2 text-gray-900 dark:text-white">Understanding Base64 Encoding</h3>
                                 <p class="text-sm text-gray-600 dark:text-gray-300 mt-3">
-                                    Base64 is an encoding scheme used to represent binary data in ASCII text format—it is NOT encryption. Never rely on Base64 encoding to secure sensitive API credentials or confidential user data.
+                                    Base64 represents binary data in ASCII text format—it is NOT encryption. Sensitive secrets or API credentials should never rely on Base64 alone for protection.
                                 </p>
                             </div>
                         </article>
                     </div>
                 </section>
 
+                <!-- SECTION: ABOUT US -->
+                <section id="about" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 md:p-8 space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-brand-600 dark:text-brand-400 text-xl"></i> About DevCraft Studio
+                    </h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        DevCraft Studio is an online browser-based utility suite designed for web developers, API engineers, and webmasters. We provide fast, privacy-focused string transformation, data formatting, and regex testing utilities.
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Our tools run entirely on the client side. Your code snippets, JSON objects, and string inputs are never uploaded to remote servers or saved in cloud databases.
+                    </p>
+                </section>
+
+                <!-- SECTION: PRIVACY POLICY -->
+                <section id="privacy" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 md:p-8 space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-user-shield text-brand-600 dark:text-brand-400 text-xl"></i> Privacy Policy
+                    </h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        DevCraft Studio prioritizes developer privacy. All formatting, Base64 processing, and regex evaluations occur strictly inside your client web browser session.
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        We use standard web server logs solely for security audit purposes and non-identifiable traffic statistics. We use local browser storage to retain user interface preferences, such as light/dark mode selection.
+                    </p>
+                </section>
+
+                <!-- SECTION: TERMS OF SERVICE -->
+                <section id="terms" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 md:p-8 space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-file-contract text-brand-600 dark:text-brand-400 text-xl"></i> Terms of Service
+                    </h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        By using DevCraft Studio, you agree to access our utilities for lawful software development and testing activities.
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                        All developer utilities are provided "as is" without warranty. DevCraft Studio assumes no liability for data formatting errors or execution inaccuracies in production environments.
+                    </p>
+                </section>
+
+                <!-- SECTION: CONTACT SUPPORT -->
+                <section id="contact" class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 md:p-8 space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-brand-600 dark:text-brand-400 text-xl"></i> Contact Support
+                    </h2>
+                    <form onsubmit="event.preventDefault(); alert('Message sent! Our support team will get back to you within 24 hours.');" class="space-y-4 max-w-xl">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Your Name</label>
+                            <input type="text" required placeholder="John Developer" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 text-sm outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Email Address</label>
+                            <input type="email" required placeholder="developer@example.com" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 text-sm outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Message</label>
+                            <textarea rows="4" required placeholder="Describe your question or feedback..." class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-900 text-sm outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs rounded-xl transition shadow-sm">Submit Inquiry</button>
+                    </form>
+                </section>
+
             </div>
 
-            <!-- SIDEBAR AREA (Ad Unit #3 + Privacy Card) -->
+            <!-- SIDEBAR AREA -->
             <aside class="lg:col-span-4 space-y-6">
                 <div class="sticky top-20 space-y-6">
-                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center shadow-sm adsense-container">
-                        <div class="min-h-[250px] flex items-center justify-center text-xs text-gray-400 border border-dashed border-gray-200 dark:border-gray-700 rounded-xl p-4">
-                            <ins class="adsbygoogle"
-                                 style="display:block"
-                                 data-ad-client="ca-pub-4321543724878495"
-                                 data-ad-slot="3344556678"
-                                 data-ad-format="auto"
-                                 data-full-width-responsive="true"></ins>
-                            <script>
-                                 (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        </div>
-                    </div>
-
                     <div class="bg-gradient-to-br from-brand-600 to-brand-800 text-white rounded-2xl p-6 shadow-md">
                         <i class="fa-solid fa-shield-cat text-3xl mb-3 text-brand-200"></i>
                         <h3 class="text-lg font-bold">100% Private & Local</h3>
@@ -286,7 +318,7 @@
         </div>
     </main>
 
-    <!-- FOOTER WITH MANDATORY ADSENSE POLICY LINKS -->
+    <!-- FOOTER WITH PUBLISHER COMPLIANCE LINKS -->
     <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -296,38 +328,21 @@
                     <span class="text-xs text-gray-500 dark:text-gray-400">© 2026. All Rights Reserved.</span>
                 </div>
 
-                <!-- Policy Pages Modals Links -->
                 <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-gray-600 dark:text-gray-300">
-                    <button onclick="openPolicyModal('privacy')" class="hover:underline">Privacy Policy</button>
+                    <a href="#about" class="hover:underline">About Us</a>
                     <span>•</span>
-                    <button onclick="openPolicyModal('terms')" class="hover:underline">Terms of Service</button>
+                    <a href="#privacy" class="hover:underline">Privacy Policy</a>
                     <span>•</span>
-                    <button onclick="openPolicyModal('about')" class="hover:underline">About Us</button>
+                    <a href="#terms" class="hover:underline">Terms of Service</a>
                     <span>•</span>
-                    <button onclick="openPolicyModal('contact')" class="hover:underline">Contact Support</button>
+                    <a href="#contact" class="hover:underline">Contact Support</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- POLICY MODAL POPUP -->
-    <div id="policy-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-2xl w-full p-6 max-h-[80vh] overflow-y-auto border border-gray-200 dark:border-gray-700 shadow-xl">
-            <div class="flex justify-between items-center mb-4 border-b pb-3 border-gray-200 dark:border-gray-700">
-                <h3 id="modal-title" class="text-xl font-bold text-gray-900 dark:text-white">Policy</h3>
-                <button onclick="closePolicyModal()" class="text-gray-400 hover:text-gray-600 text-lg"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div id="modal-content" class="text-sm text-gray-600 dark:text-gray-300 space-y-3 leading-relaxed"></div>
-        </div>
-    </div>
-
     <!-- UTILITY JAVASCRIPT LOGIC -->
     <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            document.getElementById('tool-' + tabId).classList.remove('hidden');
-        }
-
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
             const icon = document.getElementById('theme-icon');
@@ -342,6 +357,7 @@
             const el = document.getElementById(id);
             el.select();
             navigator.clipboard.writeText(el.value);
+            alert('Copied to clipboard!');
         }
 
         // JSON Formatter
@@ -423,46 +439,6 @@
             } else {
                 inputEl.value = decodeURIComponent(inputEl.value);
             }
-        }
-
-        // Modals Logic
-        function openPolicyModal(type) {
-            const modal = document.getElementById('policy-modal');
-            const title = document.getElementById('modal-title');
-            const content = document.getElementById('modal-content');
-            modal.classList.remove('hidden');
-
-            if (type === 'privacy') {
-                title.innerText = 'Privacy Policy';
-                content.innerHTML = `
-                    <p><strong>Effective Date:</strong> October 2026</p>
-                    <p>DevCraft Studio prioritizes developer privacy. All data formatting, Base64 conversions, and regex testing occur strictly locally inside your web browser. No payload contents or string inputs are logged or sent to remote servers.</p>
-                    <p><strong>Third-Party Advertisers:</strong> We use Google AdSense to serve ads. Google, as a third-party vendor, uses cookies to serve ads based on your prior visits to our website or other websites.</p>
-                    <p>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" class="text-brand-600 underline">Google Ads Settings</a>.</p>
-                `;
-            } else if (type === 'terms') {
-                title.innerText = 'Terms of Service';
-                content.innerHTML = `
-                    <p><strong>Effective Date:</strong> October 2026</p>
-                    <p>By accessing DevCraft Studio, you agree to use our developer tools for lawful debugging and string processing. Software is provided "as is" without warranty.</p>
-                `;
-            } else if (type === 'about') {
-                title.innerText = 'About Us';
-                content.innerHTML = `
-                    <p>DevCraft Studio is a client-side developer utility suite designed for web developers, API engineers, and webmasters seeking fast, offline-capable debugging tools.</p>
-                `;
-            } else if (type === 'contact') {
-                title.innerText = 'Contact Support';
-                content.innerHTML = `
-                    <p>Need assistance or have feedback regarding DevCraft Studio? We are here to help!</p>
-                    <p>You can reach our support team directly via email at: <strong>support@devcraftstudio.com</strong></p>
-                    <p>We typically respond to all inquiries within 24–48 business hours.</p>
-                `;
-            }
-        }
-
-        function closePolicyModal() {
-            document.getElementById('policy-modal').classList.add('hidden');
         }
     </script>
 </body>
